@@ -14,7 +14,9 @@ def index():
 @app.route("/speech", methods=["POST"])
 def speech():
     message = request.form["message"]
-    return render_template("index.html", result=utils.speak_and_save(message.strip()))
+    return render_template(
+        "index.html", result=utils.speak_and_save(message.strip().replace("\n", " "))
+    )
 
 
 @app.route("/history")

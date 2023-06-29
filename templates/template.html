@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Azure Text to Speech</title>
+    <link
+      href="{{url_for('static',filename='css/main.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <h1
+          class="text-3xl font-medium title-font text-gray-900 mb-12 text-center"
+        >
+          Azure Text to Speech
+        </h1>
+        <div class="flex flex-wrap -m-4">
+          <div class="w-1/6"></div>
+          <div class="w-4/6">{% block content %}{% endblock %}</div>
+          <div class="w-1/6"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
